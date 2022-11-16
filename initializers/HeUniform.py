@@ -1,3 +1,6 @@
+import tensorflow as tf
+import numpy as np
+
 class HeUniform(tf.keras.initializers.Initializer):
   
   def __init__(self, a, mode, nonlinearity, bound = None):
