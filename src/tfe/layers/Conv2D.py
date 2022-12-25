@@ -1,6 +1,6 @@
 import tensorflow as tf
 import numpy as np
-from initializers import HeUniform
+from tfe.initializers import HeUniform
 
 class Conv2D(tf.keras.layers.Layer):
   
