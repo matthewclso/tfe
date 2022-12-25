@@ -1,6 +1,6 @@
 import tensorflow as tf
 import numpy as np
-from tfe.initializers import HeUniform
+from tfe.initializers import initializers
 
 class Conv2D(tf.keras.layers.Layer):
   
@@ -26,7 +26,7 @@ class Conv2D(tf.keras.layers.Layer):
     super(Conv2D, self).__init__()
     
     if kernel_initializer is None:
-      kernel_initializer = HeUniform(np.sqrt(5),
+      kernel_initializer = initializers(np.sqrt(5),
                                      "fan_in",
                                      "leaky_relu")
       
